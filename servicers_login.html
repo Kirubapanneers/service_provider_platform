@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Reset and Body Styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            /*background: linear-gradient(135deg, #00c6ff 0%, #0072ff 100%);*/
+            background: url('loginback.jpg') no-repeat;
+     background-size: cover;
+     background-position-x: center;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        /* Login Form Styling */
+        .login-container {
+            width: 100%;
+            max-width: 420px;
+            background: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+            padding: 35px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        /* Hover Effect for Form */
+        .login-container:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Heading */
+        h2 {
+            text-align: center;
+            color: #333;
+            font-size: 32px;
+            font-weight: 600;
+            margin-bottom: 30px;
+            letter-spacing: 1px;
+        }
+
+        /* Input Fields Styling */
+        label {
+            font-size: 16px;
+            font-weight: 400;
+            color: #444;
+            margin-bottom: 6px;
+        }
+
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 16px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            font-size: 16px;
+            background-color: #f9f9f9;
+            color: #333;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        /* Focus Effect for Inputs */
+        input[type="text"]:focus, input[type="password"]:focus {
+            border-color: #335966;
+            box-shadow: 0 0 8px rgba(0, 198, 255, 0.3);
+            outline: none;
+        }
+
+        /* Button Styling */
+        button {
+            padding: 16px;
+            background: #243d45;
+            color: #ffffff;
+            border: none;
+            width: 100%;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        /* Button Hover and Active States */
+        button:hover {
+            background: #335966;
+        }
+
+        button:active {
+            transform: scale(0.98);
+        }
+
+        /* Extra Links */
+        .extra-links {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .extra-links a {
+            font-size: 14px;
+            color:  #243d45;
+           
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .extra-links a:hover {
+            color: #335966;
+        }
+    </style>
+  
+</head>
+
+<body>
+
+    <div class="login-container">
+        <h2>Login</h2>
+
+        <form action="servicers_login.php" method="post" onsubmit="processLogin(event)">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" placeholder="Enter your username" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+            <button type="submit">Login</button>
+        </form>
+
+        <div class="extra-links">
+            
+            <a href="servicers_reg.html">Create an Account</a>
+        </div>
+    </div>
+
+</body>
+</html>

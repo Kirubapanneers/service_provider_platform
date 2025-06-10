@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electrician & Plumber Online Platform</title>
+    <link rel="stylesheet" href="k7.css"/>
+ 
+</head>
+<style>
+    header img{
+        margin-left: 50px;
+        height:60px;
+        width: 60px;
+    }
+   
+     .plan .price {
+            font-size: 24px;
+            color: #228896;
+            margin: 10px 0;
+            font-weight: bold;
+        }
+        .plan  button a{
+            color: white;
+            list-style: none;
+            text-decoration: none;
+        }
+</style>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar" >
+        <div class="hamburger" onclick="toggleMenu()">
+            <!-- Hamburger icon as three lines -->
+            <div class="line">  </div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <header style="height: 50px;">
+         <!-- <img src="logo.jpg" alt="Logo">---> 
+            
+            <h1 style="margin-left: 700px;" >e-Fixx</h1>
+        
+        </header>
+      <!--
+        <div class="logo">
+            <img src="logo.png" alt="Logo">
+        </div>
+        <div style="text-align: center;">
+          <h2>e-Fixx</h2>
+        </div>--->  
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        <h1>Premium Account</h1>
+
+        <div class="plans">
+            <div class="plan">
+                <img src="pre.jpg" alt="Plan Image">
+                <h3>Basic Plan</h3>
+                <p>Access to basic services with limited support.</p>
+                <div class="price" >$19.99 / month</div>
+                <button style="background-color: #228896;"><a href="transaction.html" style="  list-style: none;
+            text-decoration: none;">Choose Plan</a></button>
+            </div>
+            <div class="plan">
+                <img src="pre.jpg" alt="Plan Image">
+                <h3>Standard Plan</h3>
+                <p>Extended services with priority support.</p>
+                <div class="price">$29.99 / month</div>
+                <button style="background-color: #228896;"><a href="transaction.html" style="  list-style: none;
+            text-decoration: none;">Choose Plan</a></button>
+            </div>
+            <div class="plan">
+                <img src="pre.jpg" alt="Plan Image">
+                <h3>Premium Plan</h3>
+                <p>All services with 24/7 premium support.</p>
+                <div class="price">$49.99 / month</div>
+                <button style="background-color: #228896;"><a href="transaction.html" style="  list-style: none;
+            text-decoration: none;">Choose Plan</a></button>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="add-container">
+        <div>
+            <h2>Security & Trust: </h2>
+            <p> Every service backed by quality guarantees and comprehensive service warranties.</p>
+            
+        </div>
+        
+        <div>
+            <h2>Convenience </h2>
+           <p>Book expert professionals 24/7 instantly through our user-friendly platform and mobile app.</p> 
+        </div>
+        <div>
+            <h2>User Benefits</h2>
+            <p>Access special seasonal offers and holiday deals for all your home service needs.</p>
+           
+        </div>
+    </div>
+    <br>
+    <div class="add-container">
+        <div>
+            <h2>Additional Services</h2>
+            <p>Unlock premium features and benefits with our premium account.</p>
+            
+        </div>
+        
+        <div>
+            <h2>Customer Support</h2>
+            <p>Get assistance anytime with our round-the-clock customer support team through chat, call, or email.</p>
+           
+        </div>
+        <div>
+            <h2>Secure Payments</h2>
+            <p>Choose from multiple payment options including credit cards, digital wallets, and installment plans.</p>
+            
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="svg-container">
+        <div class="item">
+            <div><h2>180+ Countries</h2></div>
+            <h2> using the DataCamp platform</h2>
+            <!-- Adding stars next to the text -->
+           
+        </div>
+        <br>
+        <div class="item">
+            <div><h2>⭐⭐⭐⭐⭐</h2></div>
+            <h2> 5 star platform</h2>
+            
+        </div>
+    <br>
+        <div class="item">
+            <div><h2> 80% profits</h2></div>
+            <h2>across all platform</h2>
+            
+        </div>
+    
+        </div>
+    <br>
+    <div class="faq-section container">
+        <h2 class="heading">FAQs</h2>
+        <button class="faq-button" onclick="toggleAnswer(0)">
+            <h3>what are the cancellation policies?
+                <span class="faq-icon">+</span>
+            </h3>
+        </button>
+        <div class="faq-answer">
+            <p>Cancel anytime during your subscription period to avoid future charges.Contact customer support for more information</p>
+        </div>
+
+        <button class="faq-button" onclick="toggleAnswer(1)">
+            <h3>what are the membership benefits?
+                <span class="faq-icon">+</span>
+            </h3>
+        </button>
+        <div class="faq-answer " >
+            <p>Enjoy 24/7 Support, No Ads, and 3x Faster Service when you become a premium member. Get access to our best features for handling electrical and plumbing projects more efficiently.</p>
+        </div>
+
+        <button class="faq-button" onclick="toggleAnswer(2)">
+            <h3>How will I be charged?
+                <span class="faq-icon">+</span>
+            </h3>
+        </button>
+        <div class="faq-answer">
+            <p>You'll be charged monthly or yearly, depending on your subscription type, starting from the sign-up date. You can cancel anytime.</p>
+        </div>
+
+        <button class="faq-button" onclick="toggleAnswer(3)">
+            <h3>Can I pause my account?
+                <span class="faq-icon">+</span>
+            </h3>
+        </button>
+        <div class="faq-answer">
+            <p>Monthly subscribers can pause accounts for a specific period in their settings. Yearly subscriptions cannot be paused.</p>
+        </div>
+    </div>
+    <!--
+     <h1 class="heading">FAQs</h1>
+    <div class="info-section" id="cancellation-policy">
+        <h2>Cancellation Policy</h2>
+        <p>Cancel anytime during your subscription period to avoid future charges.</p>
+        <p>Contact customer support for more information.</p>
+    </div>
+    <div class="info-section" id="cancellation-policy">
+        <h2>Membership Information</h2>
+            <p><strong>Other Benefits:</strong> Enjoy 24/7 Support, No Ads, and 3x Faster Service when you become a premium member. Get access to our best features for handling electrical and plumbing projects more efficiently.</p>
+            <p><strong>Membership Activation:</strong> After selecting a plan, your premium membership will be activated instantly, giving you access to the enhanced features.</p>
+            <p><strong>Membership Cancellation:</strong> You can cancel your premium membership at any time. Once canceled, you'll retain premium benefits until the end of the current billing cycle.</p>
+    </div>
+    <div class="info-section" id="cancellation-policy">
+        <h2>Cancellation Policy</h2>
+        <p>Cancel anytime during your subscription period to avoid future charges.</p>
+        <p>Contact customer support for more information.</p>
+    </div> -->
+
+    <!-- Footer -->
+    
+    <footer class="footer">
+        <p>&copy; 2024 Electrician & Plumber Online Platform. All rights reserved.</p>
+    </footer>
+<script>
+    function toggleAnswer(index) {
+    const answers = document.querySelectorAll('.faq-answer');
+    const icons = document.querySelectorAll('.faq-icon');
+    const answer = answers[index];
+    const icon = icons[index];
+
+    if (answer.style.display === 'block') {
+        answer.style.display = 'none';
+        icon.textContent = '+';
+    } else {
+        answer.style.display = 'block';
+        icon.textContent = '-';
+    }
+}
+
+</script>
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Now</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body and Background */
+        body {
+            font-family: 'Nunito', sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background: url('booknowback.jpg') no-repeat;
+     background-size: cover;
+     background-position-x: center;
+            padding: 20px;
+            color: #444;
+        }
+
+        /* Form Container */
+        form {
+            width: 100%;
+            max-width: 450px;
+            background: #fff;
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            border: 2px solid #e0c3fc;
+            transition: box-shadow 0.3s ease;
+        }
+
+        /* Form Hover */
+        form:hover {
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Header */
+        h2 {
+            text-align: center;
+            font-size: 24px;
+            font-weight: 800;
+            color: #444;
+            margin-bottom: 30px;
+        }
+
+        /* Label Styling */
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            color: #555;
+        }
+
+        /* Input and Select Styling */
+        input[type="text"], input[type="tel"], select {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 14px;
+            background: #fafafa;
+            transition: all 0.3s ease;
+        }
+
+        /* Input Focus Effect */
+        input[type="text"]:focus, input[type="tel"]:focus, select:focus {
+            border-color: #8ec5fc;
+            box-shadow: 0 0 8px rgba(142, 197, 252, 0.3);
+            outline: none;
+        }
+
+        /* Submit Button */
+        button {
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            font-weight: 800;
+            color: #fff;
+            background: #243d45;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+        }
+
+        /* Button Hover and Active State */
+        button:hover {
+            background:#335966 ;
+            box-shadow: 0 8px 15px rgba(255, 117, 140, 0.3);
+        }
+
+        button:active {
+            transform: scale(0.98);
+        }
+    </style>
+    <script>
+        function handleBooking(event) {
+            event.preventDefault(); 
+            window.location.href = "transaction.html";
+        }
+    </script>
+</head>
+<body>
+
+    <form id="bookingForm" action="book-now.php" method="post" onsubmit="handleBooking(event)">
+        <h2>Book Your Service</h2>
+        
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required>
+
+        <label for="street">Street:</label>
+        <input type="text" id="street" name="street" required>
+
+        <label for="village">Village:</label>
+        <input type="text" id="village" name="village" required>
+
+        <label for="district">District:</label>
+        <input type="text" id="district" name="district" required>
+
+        <label for="payment_method">Payment Method:</label>
+        <select id="payment_method" name="payment_method" required>
+            <option value="" disabled selected>Select Payment Method</option>
+            <option value="Cash">Cash</option>
+            <option value="Credit Card">Credit Card</option>
+            <option value="Mobile Payment">Mobile Payment</option>
+        </select>
+
+        <button type="submit">Book Now</button>
+    </form>
+
+</body>
+</html>

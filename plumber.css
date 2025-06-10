@@ -1,0 +1,455 @@
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+        }
+        :root {
+            --primary-color: #1e90ff;
+            --accent-color: #1c86ee;
+            --text-color: #ffffff;
+        }
+        .header-top {
+            background-color: rgb(115, 129, 131);
+            height: 80px;
+            width: 100%;
+            font-weight: bold;
+            text-align: center;
+            padding: 30px;
+            color: #FFFFFF;
+            font-size: 1.5em;
+            letter-spacing: 1px;
+        }
+        .main-container {
+            display: flex;
+            margin: 20px;
+        }
+        .filters-sidebar {
+            width: 300px;
+            background-color: #FFFFFF;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-right: 20px;
+            position: sticky;
+            top: 100px;
+        }
+        .filters-sidebar h3 {
+            margin-bottom: 15px;
+            color: #1E90FF;
+            text-align: center;
+        }
+        .filter-group {
+            margin-bottom: 20px;
+        }
+        .apply-filters {
+            width: 100%;
+            padding: 10px;
+            background-color: #1E90FF;
+            color: #FFFFFF;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .container {
+            background-color: rgba(240, 244, 252);
+            height: 500px;
+            width: calc(100% - 0%);
+            text-align: center;
+            padding: 20px;
+        }
+        .servicers-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 30px;
+        }
+        .server-one {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .server-name {
+            font-size: 1.5em;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+        .additional-details {
+            display: none;
+            margin-top: 10px;
+            color: #333;
+        }
+        .actions a,
+        .actions button {
+            color: #fff;
+            background-color: var(--primary-color);
+            padding: 8px 12px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .actions button {
+            background-color: #1E90FF;
+            border: none;
+            cursor: pointer;
+        }
+        .show-more {
+            display: inline-block;
+            margin-top: 10px;
+            color: #007BFF;
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+        .container {
+            text-align: center;
+            max-width: 600px;
+            margin: auto;
+        }
+        .plumber-img {
+            position: relative;
+            width: 100%;
+            height: 300px;
+            overflow: hidden;
+        }
+        .plumber-img img {
+            width: 100%;
+            height: 100%;
+            display: none; /* Hide all images initially */
+        }
+        .plumber-img img.active {
+            display: block; /* Display the active image */
+        }
+        h3 {
+            font-size: 1.5em;
+            margin-bottom: 15px;
+        }
+
+
+
+
+
+        <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Plumbers</title>
+    <style>
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+        }
+        :root {
+            --primary-color: #1e90ff;
+            --accent-color: #1c86ee;
+            --text-color: #ffffff;
+        }
+        .header-top {
+            background-color: rgb(115, 129, 131);
+            height: 80px;
+            width: 100%;
+            font-weight: bold;
+            text-align: center;
+            padding: 30px;
+            color: #FFFFFF;
+            font-size: 1.5em;
+            letter-spacing: 1px;
+        }
+        .main-container {
+            display: flex;
+            margin: 20px;
+        }
+        .filters-sidebar {
+            width: 300px;
+            background-color: #FFFFFF;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-right: 20px;
+            position: sticky;
+            top: 100px;
+        }
+        .filters-sidebar h3 {
+            margin-bottom: 15px;
+            color: #1E90FF;
+            text-align: center;
+        }
+        .filter-group {
+            margin-bottom: 20px;
+        }
+        .apply-filters {
+            width: 100%;
+            padding: 10px;
+            background-color: #1E90FF;
+            color: #FFFFFF;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .container {
+            background-color: rgba(240, 244, 252);
+            height: 500px;
+            width: calc(100% - 0%);
+            text-align: center;
+            padding: 20px;
+        }
+        .servicers-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 30px;
+        }
+        .server-one {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .server-name {
+            font-size: 1.5em;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+        .additional-details {
+            display: none;
+            margin-top: 10px;
+            color: #333;
+        }
+        .actions a,
+        .actions button {
+            color: #fff;
+            background-color: var(--primary-color);
+            padding: 8px 12px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .actions button {
+            background-color: #1E90FF;
+            border: none;
+            cursor: pointer;
+            
+        }
+        .show-more {
+            display: inline-block;
+            margin-top: 10px;
+            color: #007BFF;
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+        .container {
+            text-align: center;
+            max-width: 600px;
+            margin: auto;
+        }
+        .plumber-img {
+            position: relative;
+            width: 100%;
+            height: 300px;
+            overflow: hidden;
+        }
+        .plumber-img img {
+            width: 100%;
+            height: 100%;
+            display: none; /* Hide all images initially */
+        }
+        .plumber-img img.active {
+            display: block; /* Display the active image */
+        }
+        h3 {
+            font-size: 1.5em;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="header-top">
+    Search Plumbers
+</div>
+
+<div class="main-container">
+    <aside class="filters-sidebar">
+        <h3>Filters</h3>
+        <form id="filter-form">
+            <div class="filter-group">
+                <label for="service-type">Service Type</label>
+                <select id="service-type" name="service-type">
+                    <option value="">All Services</option>
+                    <option value="plumbers">Plumbers</option>
+                    <option value="electricians">Electricians</option>
+                    <option value="carpenters">Carpenters</option>
+                </select>
+            </div>
+
+
+
+                <!-- Location Filter -->
+                <div class="filter-group">
+                    <label for="location">Location</label>
+                    <select id="location" name="location">
+                        <option value="">All Locations</option>
+                        <option value="chennai">Chennai</option>
+                        <option value="madurai">Madurai</option>
+                        <option value="coimbatore">Coimbatore</option>
+                    </select>
+                </div>
+
+                <!-- Warranty Filter -->
+                <div class="filter-group">
+                    <label for="warranty">Warranty</label>
+                    <select id="warranty" name="warranty">
+                        <option value="">All Warranties</option>
+                        <option value="6-months">6 Months</option>
+                        <option value="1-year">1 Year</option>
+                        <option value="2-years">2 Years</option>
+                    </select>
+                </div>
+
+                <!-- Availability Filter -->
+                <div class="filter-group">
+                    <label for="availability">Availability</label>
+                    <select id="availability" name="availability">
+                        <option value="">Select Availability</option>
+                        <option value="6-AM-to-10-AM">6 AM to 10 AM</option>
+                        <option value="10-am-to-12-pm">10 am to 12 pm</option>
+                        <option value="2-PM-to-4-PM">2 PM to 4 PM</option>
+                    </select>
+                </div>
+
+
+
+            <div class="filter-group">
+                <label for="price-range">Price Range ($)</label>
+                <input type="range" id="price-range" name="price-range" min="100" max="2000" step="100" oninput="this.nextElementSibling.value = this.value">
+                <output>100</output>
+            </div>
+            <button type="submit" class="apply-filters">Apply Filters</button>
+        </form>
+    </aside>
+
+
+
+        <!-- Centered Search Bar and Image Slider Section -->
+    <div class="container">
+        <h3>BEST PLUMBING SERVICES</h3>
+        <div class="plumber-img">
+            <img src="plumber-page.jpg" alt="Plumbing Service 1" class="active">
+            <img src="plumberimg.jpg" alt="Plumbing Service 2">
+            <img src="plumber-page.jpg" alt="Plumbing Service 3">
+            <!-- Add more images as needed -->
+        </div>
+    </div>
+
+
+    <div class="container">
+    <form action="plumber.php" method="GET" >
+        <label for="location">Location:</label>
+        <input type="text" id="location" name="location" placeholder="Enter location" required>
+        <label for="pricing">Max Price:</label>
+        <input type="number" id="pricing" name="pricing" placeholder="Enter max price" required>
+        <button type="submit">
+         Search</button><i class="fa fa-search search-icon"></i>
+    </form>
+
+    <div class="servicers-list">
+        <?php
+        $conn = new mysqli("localhost", "root", "", "supplier_db");
+        if ($conn->connect_error) {
+            die("Connection failed: " . $conn->connect_error);
+        }
+        $location = isset($_GET['location']) ? $_GET['location'] : '';
+        $pricing = isset($_GET['pricing']) ? (int)$_GET['pricing'] : 0;
+        $sql = "SELECT * FROM suppliers WHERE services = 'plumber'";
+        if (!empty($location)) {
+            $sql .= " AND LOWER(address) LIKE '%" . $conn->real_escape_string(strtolower($location)) . "%'";
+        }
+        if ($pricing > 0) {
+            $sql .= " AND pricing <= " . $pricing;
+        }
+        $result = $conn->query($sql);
+        if ($result->num_rows > 0) {
+            while ($row = $result->fetch_assoc()) {
+                echo '
+                <div class="server-one">
+                    <h4 class="server-name">' . htmlspecialchars($row['company_name']) . '</h4>
+                    <ul>
+                        <li><strong>Location:</strong> ' . htmlspecialchars($row['address']) . '</li>
+                        <li><strong>Pricing:</strong> ₹' . $row['pricing'] . '</li>
+                        <li><strong>Warranty:</strong> ' . htmlspecialchars($row['warranty']) . '</li>
+                        <li><strong>Availability:</strong> ' . htmlspecialchars($row['availability']) . '</li>
+                    </ul>
+                    <div class="additional-details" style="display: none;">
+                        <p><strong>Warranty Includes:</strong> ' . htmlspecialchars($row['warranty_includes']) . '</p>
+                        <p><strong>Warranty Excludes:</strong> ' . htmlspecialchars($row['warranty_excludes']) . '</p>
+                    </div>
+                    <a href="javascript:void(0);" class="show-more">Show more</a>
+                </div>';
+            }
+        } else {
+            echo "<p>No plumbers found.</p>";
+        }
+        $conn->close();
+        ?>
+    </div>
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const showMoreLinks = document.querySelectorAll('.show-more');
+        showMoreLinks.forEach(function (link) {
+            link.addEventListener('click', function (event) {
+                event.preventDefault();
+                const details = this.nextElementSibling;
+                details.style.display = details.style.display === 'block' ? 'none' : 'block';
+                this.textContent = details.style.display === 'block' ? 'Show less' : 'Show more';
+            });
+        });
+    });
+
+//showmore details
+document.addEventListener('DOMContentLoaded', function() {
+    const showMoreLinks = document.querySelectorAll('.show-more');
+    showMoreLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            const additionalDetails = this.previousElementSibling;
+            if (additionalDetails.style.display === 'none') {
+                additionalDetails.style.display = 'block';
+                this.textContent = 'Show less';
+            } else {
+                additionalDetails.style.display = 'none';
+                this.textContent = 'Show more';
+            }
+        });
+    });
+});
+
+ // JavaScript to make images slide automatically
+ let currentIndex = 0;
+        const images = document.querySelectorAll('.plumber-img img');
+        const totalImages = images.length;
+
+        function showNextImage() {
+            images[currentIndex].classList.remove('active'); // Hide the current image
+            currentIndex = (currentIndex + 1) % totalImages; // Move to the next index, looping back if needed
+            images[currentIndex].classList.add('active'); // Show the next image
+        }
+
+        // Change image every 3 seconds
+        setInterval(showNextImage, 3000);
+</script>
+
+</body>
+</html>

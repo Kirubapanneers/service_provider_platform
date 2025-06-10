@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electrician && Plumber Online Platform</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+        }
+        header {
+            background-color: #243d45;
+            padding: 10px ;
+            text-align: center;
+            height: 60px;
+          
+        }
+        header h2{
+            color: white;
+            font-size: 2em;
+    margin-bottom: 20px;
+        }
+        nav {
+            background-color: #272323;
+            padding: 10px;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li {
+            position: relative;
+            display: inline-block;
+        }
+        nav ul li a {
+            color: rgb(233, 224, 224);
+            padding: 14px 20px;
+            text-decoration: none;
+            display: block;
+        }
+        nav ul li:hover > a {
+            background-color: #575757;
+        }
+        nav ul li ul {
+            display: none;
+            position: absolute;
+            background-color: #333;
+            min-width: 200px;
+            z-index: 1;
+        }
+        nav ul li:hover ul {
+            display: block;
+        }
+        nav ul li ul li {
+            display: block;
+        }
+        nav ul li ul li a {
+            padding: 10px 20px;
+        }
+        nav ul li ul li a:hover {
+            background-color: #575757;
+        }
+        section {
+            padding: 20px;
+            margin: 10px;
+            background-color: rgb(216, 202, 202);
+            border-radius: 8px;
+            display: none;
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: rgb(230, 217, 217);
+        
+        }
+        .container {
+            max-width: 1000px;
+            margin: auto;
+        }
+        .active {
+            display: block;
+        }
+    </style>
+    <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+            document.getElementById(sectionId).classList.add('active');
+        }
+    </script>
+</head>
+<body>
+
+<header>
+    <h2> e-Fixxx</h2>
+    
+</header>
+
+<nav>
+    <ul>
+        <li>
+            <a href="#" onclick="showSection('about')">About Us</a>
+            <ul>
+                <li><a href="#" onclick="showSection('support')">Customer Support</a></li>
+                <li><a href="#" onclick="showSection('terms')">Terms and Conditions</a></li>
+                <li><a href="#" onclick="showSection('faq')">FAQs</a></li>
+                <li><a href="#" onclick="showSection('contact')">Contact Us</a></li>
+            </ul>
+        </li>
+    </ul>
+</nav>
+
+
+<div class="container">
+    <section id="about" class="active">
+        <h2>About Us</h2>
+        <p>We are a leading platform that connects you with experienced electricians and plumbers for all your household or commercial needs. Our team is dedicated to providing quick, reliable, and professional services to solve any electrical or plumbing issue you may have.</p>
+        <p>We take pride in offering top-tier customer support and ensuring that our clients are satisfied with our services. Whether it's an emergency repair or a routine maintenance check, we are here to help.</p>
+    </section>
+
+    <section id="support">
+        <h2>Customer Support</h2>
+        <p>If you have any questions, concerns, or need help with our platform, our customer support team is available 24/7. You can reach out to us via phone, email, or live chat, and we'll ensure that your issue is resolved promptly.</p>
+        <ul>
+            <li>Email: serviceproviders@gmail.com</li>
+            <li>Phone: +123456789</li>
+            
+        </ul>
+    </section>
+
+    <section id="terms">
+        <h2>Terms and Conditions</h2>
+        <p>By using our platform, you agree to the following terms and conditions:</p>
+        <ul>
+            <li>All electricians and plumbers listed are independent contractors. We do not take responsibility for any damages caused during their services.</li>
+            <li>Payments are to be made directly to the contractor upon completion of the job unless otherwise stated.</li>
+            <li>We reserve the right to update these terms at any time. It is your responsibility to review them regularly.</li>
+        </ul>
+    </section>
+
+    <section id="faq">
+        <h2>Frequently Asked Questions (FAQs)</h2>
+        <h3>1. How do I book a service?</h3>
+        <p>You can book a service by filling out the form on our website, or by calling our customer support team.</p>
+        
+        <h3>2. What services do you offer?</h3>
+        <p>We offer a wide range of electrical and plumbing services, including repairs, installations, and routine maintenance.</p>
+
+        <h3>3. How do I know the service provider is qualified?</h3>
+        <p>All of our electricians and plumbers are licensed, experienced, and verified before being listed on our platform.</p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>If you have any inquiries or need more information, feel free to contact us:</p>
+        <ul>
+            <li>Email: serviceproviders@gmail.com</li>
+            <li>Phone: +123-456-7890</li>
+            
+        </ul>
+    </section>
+</div>
+
+<footer>
+    <p>&copy; 2024 serviceproviders. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

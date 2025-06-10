@@ -1,0 +1,10 @@
+connect.php
+.env
+*.sql
+config.php
+db_config.php
+/uploads/
+confirmation.php
+*.log
+/vendor/
+/node_modules/

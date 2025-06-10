@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Platform</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="plumber.js"></script>
+</head>
+<body>
+    
+    <div class="header-top">
+        <div class="logo">Service Platform</div>
+    </div>
+
+    <div class="page-wrapper">
+        <div class="main-container">
+
+            <!-- Filters Sidebar -->
+            <aside class="filters-sidebar">
+                <h3>Filters</h3>
+                <form id="filter-form">
+                    <!-- Service Type Filter -->
+                    <div class="filter-group">
+                        <label for="service-type">Service Type</label>
+                        <select id="service-type" name="service-type">
+                            <option value="">All Services</option>
+                            <option value="plumbers">Plumbers</option>
+                            <option value="electricians">Electricians</option>
+                            <option value="carpenters">Carpenters</option>
+                        </select>
+                    </div>
+
+                    <!-- Price Range Filter -->
+                    <div class="filter-group">
+                        <label for="price-range">Price Range ($)</label>
+                        <input type="range" id="price-range" name="price-range" min="100" max="2000" step="100" oninput="this.nextElementSibling.value = this.value">
+                        <output>100</output>
+                    </div>
+
+                    <!-- Location Filter -->
+                    <div class="filter-group">
+                        <label for="location">Location</label>
+                        <select id="location" name="location">
+                            <option value="">All Locations</option>
+                            <option value="chennai">Chennai</option>
+                            <option value="madurai">Madurai</option>
+                            <option value="coimbatore">Coimbatore</option>
+                        </select>
+                    </div>
+
+                    <!-- Warranty Filter -->
+                    <div class="filter-group">
+                        <label for="warranty">Warranty</label>
+                        <select id="warranty" name="warranty">
+                            <option value="">All Warranties</option>
+                            <option value="6-months">6 Months</option>
+                            <option value="1-year">1 Year</option>
+                            <option value="2-years">2 Years</option>
+                        </select>
+                    </div>
+
+                    <!-- Availability Filter -->
+                    <div class="filter-group">
+                        <label for="availability">Availability</label>
+                        <select id="availability" name="availability">
+                            <option value="">Select Availability</option>
+                            <option value="6-AM-to-10-AM">6 AM to 10 AM</option>
+                            <option value="10-AM-to-2-PM">10 AM to 2 PM</option>
+                            <option value="2-PM-to-4-PM">2 PM to 4 PM</option>
+                        </select>
+                    </div>
+
+                    <!-- Apply Filters Button -->
+                    <button type="submit" class="apply-filters">Apply Filters</button>
+                </form>
+            </aside>
+
+            <!-- Search Bar -->
+            <div class="search-bar">
+                <input type="text" id="search-input" placeholder="Search services using locations and services...">
+                <ion-icon name="search-outline" class="search-icon"></ion-icon>
+            </div>
+
+            <!-- Services List -->
+            <div class="server-container">
+                <!-- Example Service Block -->
+                <div class="server-one" data-type="plumbers" data-price="300" data-location="chennai" data-warranty="2-years" data-availability="6-AM-to-2-PM">
+                    <h4 class="server-name">Kiruba <span class="rating">★ 4/5</span></h4>
+                    <hr>
+                    <ul><strong>Services</strong>
+                        <li>Sink Repair</li>
+                        <li>Motor</li>
+                        <li>Pipe Repair</li>
+                    </ul>
+                    <div class="additional-details">
+                        <p><strong>Location:</strong> Chennai</p>
+                        <p><strong>Availability:</strong> 6 AM to 10 AM</p>
+                        <p><strong>Pricing:</strong> $1200</p>
+                        <p><strong>Warranty:</strong> 2 Years</p>
+                        <p><strong>Reviews:</strong> Excellent performance and support.</p>
+                    </div>
+                    <div class="actions">
+                        <a href="#" class="show-more">Show more</a>
+                        <button class="book-now"><a href="booknow.html">Book now</a></button>
+                    </div>
+                </div>
+
+                <div class="server-one" data-type="plumbers" data-price="350" data-location="madurai" data-warranty="1-year" data-availability="6-AM-to-2-PM">
+                    <h4 class="server-name">John <span class="rating">★ 5/5</span></h4>
+                    <hr>
+                    <ul><strong>Services</strong>
+                        <li>Leak Detection</li>
+                        <li>Water Heater Installation</li>
+                        <li>Toilet</li>
+                    </ul>
+                    <div class="additional-details">
+                        <p><strong>Location:</strong> Madurai</p>
+                        <p><strong>Availability:</strong> 2 PM to 4 PM</p>
+                        <p><strong>Pricing:</strong> $400</p>
+                        <p><strong>Warranty:</strong> 1 Year</p>
+                        <p><strong>Reviews:</strong> Prompt and reliable service.</p>
+                    </div>
+                    <div class="actions">
+                        <a href="#" class="show-more">Show more</a>
+                        <button class="book-now"><a href="booknow.html">Book now</a></button>
+                    </div>
+                </div>
+
+                <!-- Add more service blocks as needed -->
+            </div>
+
+        </div>
+    </div>
+
+    
+
+</body>
+</html>

@@ -575,6 +575,58 @@ color: #333333;
         flex-direction: column;
         align-items: center;
     }
+    
+    
+}
+/* Hide mobile menu and hamburger by default on desktop */
+.hamburger {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.mobile-menu {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-top: 1px solid #ccc;
+}
+
+.mobile-menu a {
+    text-decoration: none;
+    padding: 10px;
+    background: #2c5f70;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* Show hamburger and hide full nav on small screens */
+@media (max-width: 768px) {
+    .navigation,
+    .auth-buttons,
+    .home-page {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+        margin-left: auto;
+       
+        position:sticky;
+        
+    }
+
+    .mobile-menu {
+        display: none;
+    }
+
+    .mobile-menu.active {
+        display: flex;
+        margin-top: 300px;
+    }
 }
 
 
@@ -586,20 +638,19 @@ color: #333333;
         <!-- Logo -->
         <div class="logo">e-Fixx</div>
 
-        <div class="home-page "> <a href="# " class="btn-clicked">Home Page</a> </div>
+         <div class="home-page "> <a href="# " class="btn-clicked">Home Page</a> </div>
         
-        <!-- Dropdown
-            <div class="dropdown">
-            <button class="dropdown-button">Best Service Providers ▼</button>
-            <ul class="dropdown-menu">
-                <li class="dropdown-item"><button>Plumbers</button></li>
-                <li class="dropdown-item"><button>Electricians</button></li>
-                <li class="dropdown-item"><button>Carpenters</button></li>
-            </ul>
-        </div> -->
+         <div class="hamburger" onclick="toggleMenu()">☰</div> 
+
+<div class="mobile-menu" id="mobileMenu">
+    <a href="servicers_login.html">Become a Supplier</a>
+    <a href="premium2.html">Premium</a>
+    <a href="aboutus.html">About Us</a>
+    <a href="login.html">Login/Signup</a>
+</div>
      
         
-        <!-- Navigation -->
+        
         <nav class="navigation">
             <div class="auth-buttons">
                <button id="login-user-btn"><a href="servicers_login.html" >Become a Supplier</a></button>
@@ -607,7 +658,9 @@ color: #333333;
         <div class="auth-buttons">
             <button id="login-user-btn"><a href="premium2.html">premium</a></button>
         </div>
-        </nav>
+        </nav> 
+         <!-- Hamburger icon for mobile -->
+
 
         <!---About us-->
         <div class="auth-buttons">
@@ -824,5 +877,12 @@ color: #333333;
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 <script src="script.js"></script>
+<script>
+function toggleMenu() {
+    var menu = document.getElementById("mobileMenu");
+    menu.classList.toggle("active");
+}
+</script>
+
 </body>
 </html>
